@@ -10,7 +10,6 @@ A simple RESTful API built with **Express.js** to manage a collection of product
 - Node.js (v14+ recommended)
 - npm or yarn or pnpm
 
-
 ```
 clone the repository
 - cd to the repo
