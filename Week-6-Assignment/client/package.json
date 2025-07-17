@@ -1,0 +1,43 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:unit": "jest --testPathPattern=unit --coverage",
+    "test:integration": "jest --testPathPattern=integration --coverage"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/tests/setup.js"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!**/node_modules/**"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "babel-jest": "^30.0.4",
+    "cypress": "^14.5.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.0.4",
+    "jest-environment-jsdom": "^30.0.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
